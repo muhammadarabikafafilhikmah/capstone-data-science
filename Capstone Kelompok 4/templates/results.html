@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Prediksi Pertandingan</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}?v=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=1"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Hasil Prediksi Pertandingan</h1>
+
+        <div class="team">
+            <h2 class="team-1">Tim 1</h2>
+            <p>Exp: {{ team1['Exp'] }}</p>
+            <p>Jungle: {{ team1['Jungle'] }}</p>
+            <p>Mid: {{ team1['Mid'] }}</p>
+            <p>Gold: {{ team1['Gold'] }}</p>
+            <p>Roam: {{ team1['Roam'] }}</p>
+
+            <h3>Gambar Tim 1</h3>
+            <div class="images">
+                <img src="{{ url_for('static', filename='images/' + team1['Exp'] + '.png') }}" alt="{{ team1['Exp'] }}">
+                <img src="{{ url_for('static', filename='images/' + team1['Jungle'] + '.png') }}" alt="{{ team1['Jungle'] }}">
+                <img src="{{ url_for('static', filename='images/' + team1['Mid'] + '.png') }}" alt="{{ team1['Mid'] }}">
+                <img src="{{ url_for('static', filename='images/' + team1['Gold'] + '.png') }}" alt="{{ team1['Gold'] }}">
+                <img src="{{ url_for('static', filename='images/' + team1['Roam'] + '.png') }}" alt="{{ team1['Roam'] }}">
+            </div>
+        </div>
+
+        <div class="team">
+            <h2 class="team-2">Tim 2</h2>
+            <p>Exp: {{ team2['Exp'] }}</p>
+            <p>Jungle: {{ team2['Jungle'] }}</p>
+            <p>Mid: {{ team2['Mid'] }}</p>
+            <p>Gold: {{ team2['Gold'] }}</p>
+            <p>Roam: {{ team2['Roam'] }}</p>
+
+            <h3>Gambar Tim 2</h3>
+            <div class="images">
+                <img src="{{ url_for('static', filename='images/' + team2['Exp'] + '.png') }}" alt="{{ team2['Exp'] }}">
+                <img src="{{ url_for('static', filename='images/' + team2['Jungle'] + '.png') }}" alt="{{ team2['Jungle'] }}">
+                <img src="{{ url_for('static', filename='images/' + team2['Mid'] + '.png') }}" alt="{{ team2['Mid'] }}">
+                <img src="{{ url_for('static', filename='images/' + team2['Gold'] + '.png') }}" alt="{{ team2['Gold'] }}">
+                <img src="{{ url_for('static', filename='images/' + team2['Roam'] + '.png') }}" alt="{{ team2['Roam'] }}">
+            </div>
+        </div>
+
+        <h2 class="winner">Pemenang: {{ result }}</h2>
+    </div>
+</body>
+</html>

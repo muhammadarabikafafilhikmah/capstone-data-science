@@ -1,0 +1,200 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #2e3b4e, #f44336); /* Latar belakang gradasi biru ke merah */
+    color: #f0f0f0;
+}
+
+/* Heading styles */
+h1, h2, h3 {
+    text-align: center;
+    color: #fafafa; /* Warna putih terang untuk heading */
+}
+
+h1 {
+    font-size: 2rem; /* Ukuran font untuk h1 */
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem; /* Ukuran font untuk h2 */
+    margin: 15px 0;
+}
+
+h3 {
+    font-size: 1.2rem; /* Ukuran font untuk h3 */
+    color: #555; /* Warna abu-abu */
+    margin: 10px 0;
+}
+
+/* Container styling */
+.container {
+    max-width: 900px; /* Lebar maksimum container */
+    margin: 30px auto;
+    padding: 20px;
+    background: linear-gradient(to right, #2e3b4e, #f44336); /* Gradasi biru ke merah */
+    border-radius: 15px; /* Sudut melengkung */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Bayangan */
+    color: #f0f0f0; /* Warna teks putih terang */
+}
+
+/* Tim 1 - Heading */
+h2.team-1 {
+    color: #007BFF; /* Warna biru untuk Tim 1 */
+    font-weight: bold;
+}
+
+/* Tim 2 - Heading */
+h2.team-2 {
+    color: #DC3545; /* Warna merah untuk Tim 2 */
+    font-weight: bold;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: linear-gradient(to right, #2e3b4e, #f44336); /* Gradasi biru ke merah */
+    padding: 20px;
+    border-radius: 10px; /* Sudut melengkung */
+}
+
+/* Team container */
+.team {
+    flex: 1; /* Membagi ruang untuk setiap tim */
+    margin: 10px;
+    padding: 20px;
+    background: #f0f4f7; /* Latar belakang abu-abu lembut */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan */
+}
+
+/* Label styling */
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px; /* Jarak atas dan bawah */
+    color: #555; /* Warna abu-abu */
+}
+
+/* Input select and button styling */
+select, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    background: #f0f8ff; /* Warna biru lembut */
+    color: #333; /* Warna teks abu-abu gelap */
+}
+
+select:focus, button:focus {
+    border-color: #007BFF; /* Warna biru saat fokus */
+    outline: none;
+}
+
+/* Button styling */
+button {
+    background: #007BFF; /* Warna biru untuk tombol */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s; /* Efek transisi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan */
+}
+
+button:hover {
+    background: #0056b3; /* Warna biru lebih gelap saat hover */
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.images {
+    display: flex; /* Mengatur gambar dalam satu baris */
+    justify-content: center; /* Gambar berada di tengah */
+    gap: 15px; /* Jarak antar gambar */
+    padding: 20px;
+    background-color: #f0f4f7; /* Latar belakang abu-abu lembut */
+}
+
+.images img {
+    max-width: 150px; /* Batas maksimum lebar gambar */
+    max-height: 150px; /* Batas maksimum tinggi gambar */
+    border-radius: 10px; /* Sudut melengkung */
+    object-fit: contain; /* Proporsi gambar tetap */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan */
+    transition: transform 0.3s; /* Efek hover */
+}
+
+.images img:hover {
+    transform: scale(1.1); /* Zoom saat hover */
+}
+
+/* Winner section */
+h2.winner {
+    text-align: center; /* Teks di tengah */
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFFFFF; /* Warna putih */
+    margin-top: 30px;
+    animation: highlight-white 2s ease-in-out infinite alternate; /* Efek highlight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan teks */
+}
+
+/* Animasi perubahan warna putih */
+@keyframes highlight-white {
+    0% {
+        color: #FFFFFF; /* Warna putih terang */
+    }
+    100% {
+        color: #E0E0E0; /* Warna abu-abu terang */
+    }
+}
+
+/* Styling specific to the hero dropdowns in the form */
+select {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Focus effect for the selects */
+select:focus {
+    border-color: #007BFF;
+    outline: none;
+    background-color: #f0f8ff;
+}
+
+/* General layout for result section */
+.team p {
+    font-size: 1.1rem; /* Ukuran font */
+    color: #333; /* Warna abu-abu gelap */
+    margin-bottom: 10px;
+}
+
+/* Section for H3 styling */
+h3 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: #007bff; /* Warna biru untuk heading */
+    text-align: center;
+}
+
+/* Styling for specific winner section */
+h2.prediction-result {
+    color: #FF9800; /* Warna oranye untuk hasil prediksi */
+    font-weight: bold;
+}

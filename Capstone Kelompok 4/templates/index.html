@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Pemenang</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}?v=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=1">  
+</head>
+<body>
+    <div class="container">
+        <h1>Masukkan Komposisi Tim</h1>
+        <form method="POST" action="/predict">
+            <div class="team">
+                <h2 class="team-1">Tim 1</h2>
+                <!-- Exp lane -->
+                <label for="team1_exp">Exp:</label>
+                <select id="team1_exp" name="team1_exp" required>
+                    {% for hero in heroes %}
+                        <option value="{{ hero }}">{{ hero }}</option>
+                    {% endfor %}
+                </select><br>
+
+                <!-- Jungle lane -->
+                <label for="team1_jungle">Jungle:</label>
+                <select id="team1_jungle" name="team1_jungle" required>
+                    {% for hero in heroes %}
+                        <option value="{{ hero }}">{{ hero }}</option>
+                    {% endfor %}
+                </select><br>
+
+                <!-- Mid lane -->
+                <label for="team1_mid">Mid:</label>
+                <select id="team1_mid" name="team1_mid" required>
+                    {% for hero in heroes %}
+                        <option value="{{ hero }}">{{ hero }}</option>
+                    {% endfor %}
+                </select><br>
+
+                <!-- Gold lane -->
+                <label for="team1_gold">Gold:</label>
+                <select id="team1_gold" name="team1_gold" required>
+                    {% for hero in heroes %}
+                        <option value="{{ hero }}">{{ hero }}</option>
+                    {% endfor %}
+                </select><br>
+
+                <!-- Roam lane -->
+                <label for="team1_roam">Roam:</label>
+                <select id="team1_roam" name="team1_roam" required>
+                    {% for hero in heroes %}
+                        <option value="{{ hero }}">{{ hero }}</option>
+                    {% endfor %}
+                </select><br>
+            </div>
+
+            <div class="team">
+                <h2 class="team-2">Tim 2</h2>
+                <!-- Exp lane -->
+                <label for="team2_exp">Exp:</label>
+                <select id="team2_exp" name="team2_exp" required>
+                    {% for hero in heroes %}
+                        <option value="{{ hero }}">{{ hero }}</option>
+                    {% endfor %}
+                </select><br>
+
+                <!-- Jungle lane -->
+                <label for="team2_jungle">Jungle:</label>
+                <select id="team2_jungle" name="team2_jungle" required>
+                    {% for hero in heroes %}
+                        <option value="{{ hero }}">{{ hero }}</option>
+                    {% endfor %}
+                </select><br>
+
+                <!-- Mid lane -->
+                <label for="team2_mid">Mid:</label>
+                <select id="team2_mid" name="team2_mid" required>
+                    {% for hero in heroes %}
+                        <option value="{{ hero }}">{{ hero }}</option>
+                    {% endfor %}
+                </select><br>
+
+                <!-- Gold lane -->
+                <label for="team2_gold">Gold:</label>
+                <select id="team2_gold" name="team2_gold" required>
+                    {% for hero in heroes %}
+                        <option value="{{ hero }}">{{ hero }}</option>
+                    {% endfor %}
+                </select><br>
+
+                <!-- Roam lane -->
+                <label for="team2_roam">Roam:</label>
+                <select id="team2_roam" name="team2_roam" required>
+                    {% for hero in heroes %}
+                        <option value="{{ hero }}">{{ hero }}</option>
+                    {% endfor %}
+                </select><br>
+            </div>
+
+            <button type="submit" class="btn">Prediksi</button>
+        </form>
+    </div>
+</body>
+</html>
