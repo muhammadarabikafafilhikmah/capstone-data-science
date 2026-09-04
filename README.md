@@ -1,12 +1,12 @@
 # Analisis Optimal Team Composition Mobile Legends
 
-Project Capstone Data Science untuk menganalisis komposisi tim Mobile Legends berdasarkan Role dan Lane menggunakan metode Machine Learning.
+Project Capstone Data Science untuk menganalisis komposisi tim Mobile Legends berdasarkan Role dan Lane menggunakan Machine Learning.
 
 ## Deskripsi
 
 Project ini bertujuan untuk menganalisis komposisi tim pada Mobile Legends berdasarkan Role dan Lane serta memprediksi peluang kemenangan dari suatu komposisi tim.
 
-Data yang digunakan berasal dari data hero Mobile Legends dan data pertandingan turnamen MPL. Hasil analisis kemudian diimplementasikan ke dalam aplikasi web berbasis Flask yang dapat digunakan sebagai sistem rekomendasi dalam proses Draft Pick.
+Data yang digunakan berasal dari data hero Mobile Legends dan data pertandingan turnamen MPL. Hasil analisis kemudian diimplementasikan ke dalam aplikasi web berbasis Flask yang dapat digunakan sebagai sistem pendukung dalam proses Draft Pick.
 
 ## Tujuan
 
@@ -41,7 +41,7 @@ Tahapan pengerjaan project meliputi:
 
 ## Machine Learning
 
-Beberapa algoritma Machine Learning yang diuji dalam project ini antara lain:
+Beberapa algoritma Machine Learning yang diuji dalam project ini:
 
 - Gaussian Naive Bayes
 - Bernoulli Naive Bayes
@@ -52,7 +52,7 @@ Beberapa algoritma Machine Learning yang diuji dalam project ini antara lain:
 - Gradient Boosting
 - Voting Classifier
 
-Model kemudian dibandingkan berdasarkan beberapa metrik evaluasi seperti:
+Model dievaluasi menggunakan:
 
 - Accuracy
 - Precision
@@ -60,13 +60,34 @@ Model kemudian dibandingkan berdasarkan beberapa metrik evaluasi seperti:
 - F1-Score
 - Confusion Matrix
 
-Berdasarkan eksperimen pada notebook, beberapa model ensemble dan tree-based menghasilkan performa yang tinggi pada data pengujian.
+### Hasil Eksperimen
 
-> Catatan: nilai performa model pada notebook merupakan hasil eksperimen pada skenario pemodelan tertentu dan tidak secara langsung merepresentasikan performa model yang digunakan pada aplikasi Flask.
+Berikut merupakan hasil evaluasi model pada eksperimen yang dilakukan di notebook:
+
+| Model | Accuracy |
+|---|---:|
+| Gaussian Naive Bayes | 95% |
+| Logistic Regression | 95% |
+| Decision Tree | 93% |
+| Random Forest | 98% |
+| Gradient Boosting | 98% |
+| Voting Classifier | 98% |
+
+Random Forest, Gradient Boosting, dan Voting Classifier menghasilkan accuracy tertinggi pada eksperimen tersebut, yaitu sekitar 98%.
+
+> **Catatan:** Hasil evaluasi di atas merupakan hasil eksperimen pada notebook dengan skenario preprocessing dan target tertentu. Hasil tersebut tidak secara langsung merepresentasikan performa model yang digunakan pada aplikasi Flask. Aplikasi menggunakan `model1.pkl` dengan konfigurasi target yang berbeda.
+
+## Insight Analisis
+
+Salah satu hasil analisis menunjukkan bahwa komposisi berdasarkan pembagian Role dan Lane tidak selalu menghasilkan tingkat kemenangan yang tinggi hanya karena komposisinya terlihat seimbang.
+
+Pada salah satu analisis komposisi, kategori komposisi yang dianggap "seimbang" memiliki win rate sebesar **35,71%**. Hal ini menunjukkan bahwa keseimbangan Role dan Lane saja tidak dapat menjadi satu-satunya faktor dalam menentukan keberhasilan sebuah komposisi tim.
 
 ## Aplikasi Web
 
-Model Machine Learning diimplementasikan menggunakan Flask untuk membuat aplikasi web sederhana yang dapat digunakan untuk melakukan prediksi berdasarkan komposisi tim.
+Model Machine Learning kemudian diimplementasikan ke dalam aplikasi web menggunakan Flask.
+
+Aplikasi ini memungkinkan pengguna memasukkan komposisi Role/Lane dan memperoleh hasil prediksi berdasarkan model yang telah dilatih.
 
 ## Teknologi yang Digunakan
 
